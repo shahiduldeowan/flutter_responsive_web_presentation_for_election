@@ -1,0 +1,10 @@
+{
+    "dart.lineLength": 300,
+    "dart.doNotFormat": [
+        "**/test/**"
+    ],
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    }
+}

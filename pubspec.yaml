@@ -1,0 +1,27 @@
+name: flutter_responsive_web_presentation_for_election
+description: "A Flutter application for publishing and tracking club election
+  results in real-time. This app provides a dynamic platform for clubs to
+  announce election outcomes seamlessly."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  flutter_bloc: ^8.1.3
+  get_it: ^7.6.4
+  equatable: ^2.0.5
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logo/
