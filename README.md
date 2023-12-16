@@ -53,7 +53,8 @@ After successful build, your application structure should look like this:
 ├── assets                          - It contains all images of our application.
 │   └── logo                        - It contains favicon icon
 ├── lib                             - Most important folder in the application, used to write most of the Dart code..
-│   └── main.dart                   - Starting point of the application
+│   ├── main.dart                   - Starting point of the application
+│   └── app.dart                    - This widget is the root of our application
 └── test
     └── widget_test.dart            - Test starting point of the application
 ```
