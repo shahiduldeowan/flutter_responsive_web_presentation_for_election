@@ -3,6 +3,6 @@ import 'package:http/http.dart';
 
 final GetIt getIt = GetIt.instance;
 
-Future<void> initDependencies() async {
+Future<void> dependenciesInjection() async {
   getIt.registerSingleton<Client>(Client());
 }
