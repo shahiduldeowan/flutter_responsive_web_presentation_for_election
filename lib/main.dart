@@ -3,7 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 import './app.dart';
-import 'core/init/dependencies_setup.dart';
+import './core/di/dependencies_setup.dart';
+import './core/log/logger.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,7 +13,8 @@ void main() {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]).then((value) {
-    initDependencies().then((value) {
+    dependenciesInjection().then((value) {
+      Logger.init();
       runApp(const App());
     });
   });
