@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../config/theme/app_colors.dart' show kBoxShadowColor, kCardColor;
 import '../constants/sizes.dart' show itemBorderRadius, padding;
 
-extension AppBoxExt on Widget {
+extension BoxExtension on Widget {
   Container addShadowBox() {
     return Container(
       decoration: ShapeDecoration(
