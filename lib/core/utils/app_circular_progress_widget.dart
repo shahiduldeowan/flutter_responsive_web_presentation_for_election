@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
 
-Widget appCircularProgress([double? progress]) => Center(
+Widget appCircularProgressWidget([double? progress]) => Center(
       child: CircularProgressIndicator.adaptive(value: progress),
     );
