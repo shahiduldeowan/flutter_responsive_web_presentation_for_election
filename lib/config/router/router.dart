@@ -3,13 +3,14 @@ import 'package:go_router/go_router.dart';
 
 import '../../features/result/presentation/pages/result_page.dart';
 
-class Router {
+class MyRouter {
   static GoRouter router = GoRouter(
+    initialLocation: '/',
     routes: [
       GoRoute(
         name: ResultPage.routeName,
         path: '/',
-        pageBuilder: (context, state) => const MaterialPage(child: ResultPage()),
+        builder: (_, state) => const ResultPage(),
       ),
     ],
     redirect: (context, state) async => null,
