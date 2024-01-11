@@ -1,11 +1,84 @@
-// import 'package:equatable/equatable.dart';
+import 'package:equatable/equatable.dart';
 
-// class ResultEntity extends Equatable {
-//   final String id;
-//   final String name;
+class ResultEntity extends Equatable {
+  final int? candidateSysKey;
+  final String? candidateOrgKey;
+  final int? groupKey;
+  final String? candidateSl;
+  final String? candidateName;
+  final String? candidateImage;
+  final String? group;
+  final bool? isCountable;
+  final int? totalVote;
+  final int? projectKey;
+  final int? ballotIndex;
+  final int? totalBallot;
+  final String? remark;
 
-//   ResultEntity({this.id, this.name});
+  const ResultEntity({
+    this.candidateSysKey,
+    this.candidateOrgKey,
+    this.groupKey,
+    this.candidateSl,
+    this.candidateName,
+    this.candidateImage,
+    this.group,
+    this.isCountable,
+    this.totalVote,
+    this.projectKey,
+    this.ballotIndex,
+    this.totalBallot,
+    this.remark,
+  });
 
-//   @override
-//   List<Object> get props => [id ?? '', name ?? ''];
-// }
+  ResultEntity copyWith({
+    int? candidateSysKey,
+    String? candidateOrgKey,
+    int? groupKey,
+    String? candidateSl,
+    String? candidateName,
+    String? candidateImage,
+    String? group,
+    bool? isCountable,
+    int? totalVote,
+    int? projectKey,
+    int? ballotIndex,
+    int? totalBallot,
+    String? remark,
+  }) {
+    return ResultEntity(
+      candidateSysKey: candidateSysKey ?? this.candidateSysKey,
+      candidateOrgKey: candidateOrgKey ?? this.candidateOrgKey,
+      groupKey: groupKey ?? this.groupKey,
+      candidateSl: candidateSl ?? this.candidateSl,
+      candidateName: candidateName ?? this.candidateName,
+      candidateImage: candidateImage ?? this.candidateImage,
+      group: group ?? this.group,
+      isCountable: isCountable ?? this.isCountable,
+      totalVote: totalVote ?? this.totalVote,
+      projectKey: projectKey ?? this.projectKey,
+      ballotIndex: ballotIndex ?? this.ballotIndex,
+      totalBallot: totalBallot ?? this.totalBallot,
+      remark: remark ?? this.remark,
+    );
+  }
+
+  @override
+  List<Object?> get props {
+    return [
+      candidateSysKey,
+      candidateOrgKey,
+      groupKey,
+      candidateSl,
+      candidateName,
+      candidateImage,
+      group,
+      isCountable,
+      totalVote,
+      projectKey,
+      ballotIndex,
+      totalBallot,
+      remark,
+    ];
+  }
+}
