@@ -1,6 +1,6 @@
 const String projectKey = '100000';
 const String organizationTitle = 'Uttara Club Limited';
-const String deSoft = 'De-Soft';
+const String electionResults = 'Election Results';
 const String electionYear = 'Election for the year 2023-2024';
 const String president = 'President';
 const String boardOfDirector = 'Board of Directors';
