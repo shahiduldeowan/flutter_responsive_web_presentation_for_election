@@ -47,6 +47,8 @@ abstract class ResultEntity extends Equatable {
     String? remark,
   });
 
+  bool get isElected;
+
   @override
   List<Object?> get props {
     return [
