@@ -1,26 +1,33 @@
-// part of 'result_bloc.dart';
+part of 'result_bloc.dart';
 
-// enum ResultStateStatus {
-//   init,
-//   showLoading,
-//   hideLoading,
-//   loadedSuccess,
-//   loadedFailed,
-// }
+abstract class ResultState extends Equatable {
+  const ResultState({this.results, this.error});
 
-// class ResultState extends Equatable {
-//   final ResultStateStatus status;
-//   final ResultEntity detail;
-//   final String errorMessage;
+  final List<PublishResultEntity>? results;
+  final Object? error;
 
-//   ResultState({this.status, this.detail, this.errorMessage});
+  @override
+  List<Object?> get props => [results, error];
+}
 
-//   ResultState copyWith({ResultStateStatus status, ResultEntity detail, String errorMessage}) =>
-//       ResultState(
-//        status: status ?? this.status,
-//        detail: detail ?? this.detail,
-//        errorMessage: errorMessage ?? this.errorMessage);
+class StateResultLoading extends ResultState {
+  const StateResultLoading();
+}
 
-//   @override
-//   List<Object> get props => [status ?? '', detail ?? '', errorMessage ?? ''];
-// }
+class StateResultEmpty extends ResultState {
+  const StateResultEmpty();
+}
+
+class StateResultError extends ResultState {
+  const StateResultError({super.error});
+}
+
+class StateResultLoaded extends ResultState {
+  const StateResultLoaded({required super.results});
+
+  StateResultLoaded copyWith({List<PublishResultEntity>? results}) {
+    return StateResultLoaded(
+      results: results ?? this.results,
+    );
+  }
+}

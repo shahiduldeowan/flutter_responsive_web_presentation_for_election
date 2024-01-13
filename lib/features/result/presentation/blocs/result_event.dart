@@ -1,15 +1,12 @@
-// part of 'result_bloc.dart';
+part of 'result_bloc.dart';
 
-// abstract class ResultEvent extends Equatable {
-//   @override
-//   List<Object> get props => [];
-// }
+abstract class ResultEvent extends Equatable {
+  const ResultEvent();
 
-// class EventFetchResult extends ResultEvent {
-//   final String id;
+  @override
+  List<Object> get props => [];
+}
 
-//   EventFetchResult({@required this.id});
-
-//   @override
-//   List<Object> get props => [id];
-// }
+class EventFetchResult extends ResultEvent {
+  const EventFetchResult();
+}
