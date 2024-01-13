@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-class ResultEntity extends Equatable {
+abstract class ResultEntity extends Equatable {
   final int? candidateSysKey;
   final String? candidateOrgKey;
   final int? groupKey;
@@ -45,23 +45,7 @@ class ResultEntity extends Equatable {
     int? ballotIndex,
     int? totalBallot,
     String? remark,
-  }) {
-    return ResultEntity(
-      candidateSysKey: candidateSysKey ?? this.candidateSysKey,
-      candidateOrgKey: candidateOrgKey ?? this.candidateOrgKey,
-      groupKey: groupKey ?? this.groupKey,
-      candidateSl: candidateSl ?? this.candidateSl,
-      candidateName: candidateName ?? this.candidateName,
-      candidateImage: candidateImage ?? this.candidateImage,
-      group: group ?? this.group,
-      isCountable: isCountable ?? this.isCountable,
-      totalVote: totalVote ?? this.totalVote,
-      projectKey: projectKey ?? this.projectKey,
-      ballotIndex: ballotIndex ?? this.ballotIndex,
-      totalBallot: totalBallot ?? this.totalBallot,
-      remark: remark ?? this.remark,
-    );
-  }
+  });
 
   @override
   List<Object?> get props {
