@@ -1,5 +1,5 @@
 const String projectKey = '100000';
-const String organizationTitle = 'Uttara Club Limited';
+const String organizationTitle = 'D Club Limited';
 const String electionResults = 'Election Results';
 const String electionYear = 'Election for the year 2023-2024';
 const String president = 'President';
