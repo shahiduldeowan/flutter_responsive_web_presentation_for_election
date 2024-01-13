@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../core/utils/app_circular_progress_widget.dart';
+import '../../../../core/utils/app_error_widget.dart';
+import '../blocs/result_bloc.dart';
+import '../widgets/build_result_page.dart';
 
 class ResultPage extends StatelessWidget {
   const ResultPage({super.key});
@@ -7,9 +13,15 @@ class ResultPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Result Screen'),
+    return Scaffold(
+      body: BlocBuilder<ResultBloc, ResultState>(
+        builder: (context, resultState) {
+          return switch (resultState) {
+            StateResultError() || StateResultEmpty() => appErrorWidget(),
+            StateResultLoaded(results: var results) => BuildResultPage(resultList: results!),
+            _ => appCircularProgressWidget(),
+          };
+        },
       ),
     );
   }
