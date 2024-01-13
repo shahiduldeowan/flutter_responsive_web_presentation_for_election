@@ -1,6 +1,9 @@
+import 'publish_result_color_entity.dart';
+import 'publish_result_group_entity.dart';
+import 'publish_result_remark_entity.dart';
 import 'result_entity.dart';
 
-class PublishResultEntity extends ResultEntity {
+class PublishResultEntity extends ResultEntity with PublishResultGroupEntity, PublishResultRemarkEntity, PublishResultColorEntity {
   const PublishResultEntity({
     super.candidateSysKey,
     super.candidateOrgKey,
