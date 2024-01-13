@@ -27,10 +27,10 @@ class _ResultApiService implements ResultApiService {
         if (jsonToModel.isNotEmpty) return DataSuccess(jsonToModel);
       }
 
-      return DataFailed();
+      return DataEmpty();
     } catch (err, stk) {
       Logger.logger(name: '$runtimeType', error: err, stackTrace: stk);
-      return DataError(error: err);
+      return DataFailed(error: err);
     }
   }
 }
