@@ -10,9 +10,9 @@ class DataSuccess<T> extends DataState<T> {
 }
 
 class DataFailed<T> extends DataState<T> {
-  DataFailed();
+  DataFailed({super.error});
 }
 
-class DataError<T> extends DataState<T> {
-  DataError({super.error});
+class DataEmpty<T> extends DataState<T> {
+  DataEmpty();
 }
