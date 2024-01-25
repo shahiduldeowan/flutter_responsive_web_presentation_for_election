@@ -32,3 +32,5 @@ app.*.symbols
 
 # Obfuscation related
 app.*.map.json
+
+api_urls.dart
