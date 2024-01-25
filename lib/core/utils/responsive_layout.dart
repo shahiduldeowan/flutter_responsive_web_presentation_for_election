@@ -19,6 +19,15 @@ class ResponsiveLayout extends StatelessWidget {
 
   static bool isDesktop(BuildContext context) => MediaQuery.of(context).size.width >= 1100;
 
+  static double sizeDependsOnDevice(BuildContext context, {double? mobile, double? tab, double? desktop}) {
+    if (isMobile(context)) {
+      return mobile ?? 0.0;
+    } else if (isTablet(context)) {
+      return tab ?? 0.0;
+    }
+    return desktop ?? 0.0;
+  }
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
